@@ -1,0 +1,18 @@
+.form__container {
+    margin-top: 20%;
+}
+
+.back {
+    display: flex;
+    gap: 1rem;
+    color: #000;
+    position: absolute;
+    top: -3.5rem;
+    left: 0;
+    background: linear-gradient(
+            45deg, #e82574, #fba3c6);
+    border-radius: 4px;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+}
