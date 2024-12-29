@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="book.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Welcome to Marimba Hotel</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- <?php
+    // Replace these with your connection details
+    $servername = "localhost";
+    $username = "your_username";
+    $password = "your_password";
+    $dbname = "your_database_name";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+      $check_in = mysqli_real_escape_string($conn, $_POST['check-in']);
+      $check_out = mysqli_real_escape_string($conn, $_POST['check-out']);
+      $guest = mysqli_real_escape_string($conn, $_POST['guest']);
+      $email = mysqli_real_escape_string($conn, $_POST['email']);
+      $guest_nb = mysqli_real_escape_string($conn, $_POST['number']);
+      $phone_nb = mysqli_real_escape_string($conn, $_POST['phone']);
+      $comment = mysqli_real_escape_string($conn, $_POST['comment']);
+    
+      $sql = "INSERT INTO bookings (check_in, check_out, guest, email, guest_nb, phone_nb, comment) 
+              VALUES ('$check_in', '$check_out', '$guest', '$email', '$guest_nb', '$phone_nb', '$comment')";
+
+      if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+    }
+    
+    $conn->close();
+    ?> -->
+    
+
+    <header class="header">
+        <nav>
+            <div class="nav__bar">
+                <div class="logo">
+                    <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./index.html#service">Services</a></li>
+                <li><a href="./index.html#explore">Explore</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form__container">
+        <section class="section__container booking__container">
+            <form class="booking__form" method="post">
+                <div class="back">
+                    <span><i class="ri-arrow-left-line"></i></span>
+                    Go back to Home Page
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-calendar-2-fill"></i></span>
+                    <div>
+                        <label for="check-in">CHECK-IN</label>
+                        <input type="text" placeholder="Check In" />
+                    </div>
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-calendar-2-fill"></i></span>
+                    <div>
+                        <label for="check-out">CHECK-OUT</label>
+                        <input type="text" placeholder="Check Out" />
+                    </div>
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-user-fill"></i></span>
+                    <div>
+                        <label for="guest">GUEST</label>
+                        <input type="text" placeholder="Guest" />
+                    </div>
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-mail-fill"></i></span>
+                    <div>
+                        <label for="email">EMAIL</label>
+                        <input type="text" placeholder="Email">
+                    </div>
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-group-fill"></i></span>
+                    <div>
+                        <label for="number">GUEST NB</label>
+                        <input type="text" placeholder="Number of Guests">
+                    </div>
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-smartphone-fill"></i></span>
+                    <div>
+                        <label for="phone">PHONE NB</label>
+                        <input type="text" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div class="input__group">
+                    <span><i class="ri-message-fill"></i></span>
+                    <div>
+                        <label for="comment">COMMENT</label>
+                        <input type="text" placeholder="Your thoughts">
+                    </div>
+                </div>
+                <div class="input__group input__btn">
+                    <button class="btn" type="submit" id="submit">CHECK OUT</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <footer class="footer" id="contact">
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <div class="logo">
+                    <a href="#home"><img src="assets/logo.png" alt="logo" /></a>
+                </div>
+                <p class="section__description">
+                    Discover a world of comfort, luxury, and adventure as you explore
+                    our curated selection of hotels, making every moment of your getaway
+                    truly extraordinary.
+                </p>
+                <button class="btn" id="booknow">Book Now</button>
+            </div>
+            <div class="footer__col">
+                <h4>QUICK LINKS</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Browse Destinations</a></li>
+                    <li><a href="#">Special Offers & Packages</a></li>
+                    <li><a href="#">Room Types & Amenities</a></li>
+                    <li><a href="#">Customer Reviews & Ratings</a></li>
+                    <li><a href="#">Travel Tips & Guides</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>OUR SERVICES</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Concierge Assistance</a></li>
+                    <li><a href="#">Flexible Booking Options</a></li>
+                    <li><a href="#">Airport Transfers</a></li>
+                    <li><a href="#">Wellness & Recreation</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>CONTACT US</h4>
+                <ul class="footer__links">
+                    <li><a href="./contact.html">Marimba@info.com</a></li>
+                </ul>
+                <div class="footer__socials">
+                    <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
+                    <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 Web Design Mastery. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        document.querySelector(".back").addEventListener("click",() => {
+            window.location.href = "./index.html";
+        });
+        document.getElementById("submit").addEventListener("click",()=>{
+            alert("Room Booked Successfuly!");
+        });
+    </script>
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+
+</html>
